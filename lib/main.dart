@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
         body: SafeArea(
           child: Center(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 CircleAvatar(
                   radius: 50,
@@ -41,14 +42,50 @@ class MyApp extends StatelessWidget {
                     letterSpacing: 2,
                   ),
                 ),
-                Row(
-                  children: [
-                    Icon(
-                      Icons.campaign-outlined,
-                      color: const Color.fromARGB(255, 180, 106, 10),
-                      size: 60,
+                SizedBox(
+                  height: 20,
+                  width: 150,
+                  child: Divider(
+                    color: Colors.teal.shade100,
+                  ),
+                ), 
+                Card(
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 25,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.phone,
+                      color: Colors.teal.shade900,
                     ),
-                  ],
+                    title: Text("+92 321 1234567",
+                        style: TextStyle(
+                          fontFamily: 'SourceSans3',
+                          fontSize: 20,
+                          color: Colors.teal.shade900,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ),
+                ),
+                Card(
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 25,
+                  ),
+                  child: ListTile(
+                    leading: Icon(
+                      Icons.email,
+                      color: Colors.teal.shade900,
+                    ),
+                    title: Text("Xw5Q4@example.com",
+                        style: TextStyle(
+                          fontFamily: 'SourceSans3',
+                          fontSize: 20,
+                          color: Colors.teal.shade900,
+                          fontWeight: FontWeight.bold,
+                        )),
+                  ),
                 )
               ],
             ),
